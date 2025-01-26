@@ -1,0 +1,11 @@
+O comando para criar o ambiente virtual -> python -m venv venv_Projeto
+Para ativar o ambiente -> venv_Projeto\Scripts\activate
+Para desativar o ambiente -> deactivate
+
+Uma vez com o ambiente instalado basta instalar os pacotes/dependências necessárias para rodar determinado projeto
+
+Caso queira ver todas as dependências do projeto, usar o comando -> pip freeze
+
+Caso queira instalar as dependências a partir de um arquivo de texto, exemplo um arquivo requirements.txt onde contém todas as dependências igual o comando pip freeze listou, 
+basta executar o comando -> pip install -r requirements.txt (você precisa estar na mesma pasta do arquivo para executar o comando)
+
