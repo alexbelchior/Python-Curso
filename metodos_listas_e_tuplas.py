@@ -31,6 +31,13 @@ print('Lista original:', lista)
 print(f'Lista de números negativos: {numeros_negativos}')
 print('---------------------------------')
 
+# Preencher uma lista com outra lista através de compreensão de listas
+lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista_maiores_que_cinco = [numero for numero in lista1 if numero > 5]
+print('Lista original:', lista1)
+print(f'Lista de números maiores que cinco: {lista_maiores_que_cinco}')
+print('---------------------------------')
+
 # Inserindo um valor em uma posição específica na lista
 vogais = ['a', 'i', 'o', 'u']
 vogais.insert(1, 'e')
