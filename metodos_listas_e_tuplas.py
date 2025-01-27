@@ -22,6 +22,13 @@ print(f'Lista de números positivos: {numeros_positivos}')
 
 print('---------------------------------')
 
+# Recuperar um item específico da lista pelo seu índice
+
+item = lista[3]
+print(f'O Item {item} está na posição {lista.index(item)} da lista')
+
+print('---------------------------------')
+
 # Preencher uma lista vazia apenas com valores negativos
 numeros_negativos = []
 for numero in lista:
