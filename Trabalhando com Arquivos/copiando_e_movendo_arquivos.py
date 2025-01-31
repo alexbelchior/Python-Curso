@@ -34,4 +34,5 @@ shutil.move(caminho_arquivo, caminho_arquivo_destino)
 # Deletando arquivos
 pasta_atual = Path(__file__).parent
 caminho_arquivo = pasta_atual / 'texto1.txt'
-os.remove(caminho_arquivo)
+if caminho_arquivo.exists():
+    os.remove(caminho_arquivo)
