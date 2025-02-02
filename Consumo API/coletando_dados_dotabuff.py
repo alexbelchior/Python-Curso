@@ -24,5 +24,4 @@ if response.status_code == 200:
 else:
     print("Erro ao acessar a página.")
 
-
 print(herois)
