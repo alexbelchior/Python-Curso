@@ -31,4 +31,17 @@ with open(pasta_atual / 'lista_de_compras.txt') as lista_compras:
 
 print('--------------------------------------')
 
-#
+# Escrevendo arquivo
+pasta_atual = Path(__file__).parent
+
+itens_ja_comprados = ['Farinha', 'Café', 'Fermento', 'Queijo', 'Alface', 'Cenoura']
+
+with open(pasta_atual / 'lista_de_compras.txt') as lista_compras:
+    itens_lista = lista_compras.readlines()
+
+with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode='w') as lista_atualizada:
+    for item in itens_lista:
+        if not item.replace('\\n', '') in itens_ja_comprados:
+            lista_atualizada.write(item)
+
+print (itens_lista)
