@@ -45,3 +45,35 @@ with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode='w') as lista_at
             lista_atualizada.write(item)
 
 print (itens_lista)
+
+# Escrevendo linha a linha
+pasta_atual = Path(__file__).parent
+
+itens_ja_comprados = ['Farinha', 'Café', 'Fermento', 'Queijo', 'Alface', 'Cenoura']
+
+with open(pasta_atual / 'lista_de_compras.txt') as lista_compras:
+    itens_lista = lista_compras.readlines()
+
+itens_lista_atualizada = []
+for item in itens_lista:
+    if not item.replace('\\n', '') in itens_ja_comprados:
+        itens_lista_atualizada.append(item)
+
+with open(pasta_atual / 'lista_de_compras_atualizada.txt', mode='w') as lista_atualizada:
+    itens_lista_atualizada[-1] = itens_lista_atualizada[-1].replace('\n','')
+    lista_atualizada.writelines(itens_lista_atualizada)
+
+print (itens_lista)
+
+# Acrescentando valores a um arquivo
+pasta_atual = Path(__file__).parent
+
+novos_itens = ['Abacate']
+#novos_itens_c_quebra = [f'\n{item}' for item in novos_itens] essa linha substitui o for abaixo
+novos_itens_c_quebra = []
+
+for item in novos_itens:
+    novos_itens_c_quebra.append(f'\n{item}')
+
+with open(pasta_atual / 'lista_de_compras.txt', mode='a') as lista_adicionada:
+    lista_adicionada.writelines(novos_itens_c_quebra)
