@@ -77,3 +77,5 @@ for item in novos_itens:
 
 with open(pasta_atual / 'lista_de_compras.txt', mode='a') as lista_adicionada:
     lista_adicionada.writelines(novos_itens_c_quebra)
+
+print(lista_adicionada)
