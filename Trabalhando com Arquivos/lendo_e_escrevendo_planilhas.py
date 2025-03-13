@@ -35,3 +35,10 @@ print(tabela_clientes.head(10))
 #Escrevendo na planilha
 tabela_clientes = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='RJ')
 tabela_clientes.to_excel(pasta_atual / 'clientes_atualizado.xlsx', index=False)
+
+#Escrevendo diversas abas
+with pd.ExcelWriter(pasta_atual / 'clientes_atualizado.xlsx') as writer:
+    tabela_clientes_SP = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='SP')
+    tabela_clientes_RJ = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='RJ')
+    tabela_clientes_SP.to_excel(writer, sheet_name='SP', index=False)
+    tabela_clientes_RJ.to_excel(writer, sheet_name='RJ', index=False)
