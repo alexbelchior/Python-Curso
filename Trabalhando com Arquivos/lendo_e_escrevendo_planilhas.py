@@ -36,14 +36,6 @@ print(tabela_clientes.head(10))
 tabela_clientes = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='RJ')
 tabela_clientes.to_excel(pasta_atual / 'clientes_atualizado.xlsx', index=False)
 
-<<<<<<< HEAD
-#Escrevendo em várias abas
-tabela_clientes_sp = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='SP')
-tabela_clientes_rj = pd.read_excel(pasta_atual / 'clientes.xlsx', sheet_name='RJ')
-
-with pd.ExcelWriter(pasta_atual / 'clientes_atualizado_varias_abas.xlsx') as nova_planilha:
-    tabela_clientes_sp.to_excel(nova_planilha, sheet_name='SP', index=False)
-    tabela_clientes_rj.to_excel(nova_planilha, sheet_name='RJ', index=False)
 =======
 #Escrevendo diversas abas
 with pd.ExcelWriter(pasta_atual / 'clientes_atualizado.xlsx') as writer:
